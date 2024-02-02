@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="850.0" prefWidth="550.0" style="-fx-background-color: #2f3542;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.loginFormController">
+   <children>
+      <Label layoutX="27.0" layoutY="183.0" prefHeight="77.0" prefWidth="334.0" text="WELCOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="245.0" prefHeight="77.0" prefWidth="334.0" text="BACK !" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="85.0" layoutY="403.0" onAction="#txtUserNameGoToPasswordOnAction" prefHeight="57.0" prefWidth="382.0" promptText="USERNAME" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="46.0" fitWidth="51.0" layoutX="399.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-username-100.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtPassword" alignment="CENTER" layoutX="85.0" layoutY="495.0" onAction="#txtPasswordGoToLoginOnAction" prefHeight="57.0" prefWidth="382.0" promptText="PASSWORD" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="46.0" fitWidth="38.0" layoutX="403.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-key-100.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="346.0" layoutY="702.0" onAction="#signUpOnAction" text="Sign up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <JFXButton layoutX="85.0" layoutY="629.0" onAction="#loginOnAction" prefHeight="57.0" prefWidth="382.0" style="-fx-background-color: #2d7a83; -fx-background-radius: 30;" text="login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Text fill="WHITE" layoutX="80.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your login and password!">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="193.0" layoutY="578.0" onAction="#forgotPasswordOnAction" text="Forgot Password ?" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <CubicCurve controlX1="-129.19281005859375" controlX2="4.0" controlY1="-125.00506591796875" controlY2="160.0" endX="257.00006103515625" endY="7.99493408203125" fill="#2d7a83" layoutX="293.0" layoutY="768.0" startX="-217.0" startY="82.0" stroke="#2d7a83" />
+      <CubicCurve controlX1="118.9638671875" controlX2="786.8071899414062" controlY1="366.80401611328125" controlY2="-130.19598388671875" endX="94.84927368164062" endY="-104.0" fill="#2d7a83" layoutX="79.0" layoutY="-2.0" startX="-300.0" startY="90.0" stroke="#2d7a83" />
+      <Text fill="WHITE" layoutX="145.0" layoutY="721.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do not have an account?">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

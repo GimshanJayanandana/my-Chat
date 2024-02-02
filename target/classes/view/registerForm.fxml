@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="registerPane" prefHeight="850.0" prefWidth="550.0" style="-fx-background-color: #2f3542;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.registerFormController">
+   <children>
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="84.0" layoutY="215.0" onAction="#txtUserNameGoToPhoneNumberOnAction" prefHeight="57.0" prefWidth="382.0" promptText="USERNAME" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPassword" alignment="CENTER" layoutX="84.0" layoutY="377.0" onAction="#txtPasswordGoToNewPasswordOnAction" prefHeight="57.0" prefWidth="382.0" promptText="PASSWORD" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNewPassword" alignment="CENTER" layoutX="84.0" layoutY="459.0" onAction="#txtConfirmPasswordGoToRegisterOnAction" prefHeight="57.0" prefWidth="382.0" promptText="CONFIRM PASSWORD" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <JFXButton buttonType="RAISED" layoutX="83.0" layoutY="590.0" onAction="#btnRegisterOnAction" prefHeight="57.0" prefWidth="385.0" style="-fx-background-color: #2d7a83; -fx-background-radius: 30;" text="Sign up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <CubicCurve controlX1="45.80908203125" controlX2="342.9078369140625" controlY1="-473.0" controlY2="468.57281494140625" endX="-617.0" endY="-148.0" fill="#2d7a83" layoutX="510.0" layoutY="132.0" startX="-235.19091796875" startY="-407.9537048339844" stroke="#2d7a83" />
+      <Text fill="WHITE" layoutX="200.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up">
+         <font>
+            <Font name="System Bold Italic" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="182.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create your account">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="46.0" fitWidth="51.0" layoutX="398.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-username-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="38.0" layoutX="402.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-key-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="38.0" layoutX="402.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/icons8-key-100.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="128.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Hyperlink layoutX="337.0" layoutY="681.0" onAction="#btnLoginOnAction" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <TextField fx:id="txtPhoneNumber" alignment="CENTER" layoutX="85.0" layoutY="297.0" onAction="#txtPhoneNumberGoToPasswordOnAction" prefHeight="57.0" prefWidth="382.0" promptText="PHONE NUMBER" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
