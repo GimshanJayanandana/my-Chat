@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.dto.RegistrationDto;
 import lk.ijse.model.RegistrationModel;
 import lk.ijse.server.Server;
 
@@ -64,10 +65,21 @@ public class loginFormController {
                 stage.centerOnScreen();
                 stage.setResizable(false);
                 stage.show();
+
+                RegistrationDto userDto = registrationModel.getUserInfo(userName);
+
+                ChatWallFormController chatWallFormController = loader.getController();
+
+                chatWallFormController.setUser(userDto);
+                txtUserName.setText("");
+                txtPassword.setText("");
+
             } else {
                 new Alert(Alert.AlertType.ERROR, "User Name And Password Did Not Matched Try Again").showAndWait();
             }
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }

@@ -15,6 +15,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import lk.ijse.client.Client;
+import lk.ijse.dto.RegistrationDto;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -62,6 +63,12 @@ public class ChatWallFormController {
 
     @FXML
     private GridPane emojiGridpane;
+
+    @FXML
+    private Label lblName;
+
+    private RegistrationDto userDto;
+
 
     public void initialize(){
 
@@ -169,7 +176,18 @@ public class ChatWallFormController {
     @FXML
     void btnEmojiOnAction(ActionEvent event) {
         emojiAnchorpane.setVisible(!emojiAnchorpane.isVisible());
+    }
+    private void loadUserName(){
+        if(userDto != null){
+            String userName = userDto.getUserName();
+            lblName.setText(userName);
+        }
 
+    }
+
+    public void setUser(RegistrationDto userD) {
+        this.userDto = userD;
+        loadUserName();
     }
 }
 

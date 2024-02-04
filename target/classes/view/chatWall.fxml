@@ -31,7 +31,10 @@
             <Image url="@../icon/icons8-face-100.png" />
          </image>
       </ImageView>
-      <Label layoutX="77.0" layoutY="25.0" prefHeight="27.0" prefWidth="93.0" text="Label" />
+      <Label fx:id="lblName" layoutX="84.0" layoutY="22.0" prefHeight="27.0" prefWidth="93.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
       <ImageView fitHeight="49.0" fitWidth="58.0" layoutX="478.0" layoutY="14.0" onMouseClicked="#lblBack" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icon/icons8-back-button-100%20(2).png" />
